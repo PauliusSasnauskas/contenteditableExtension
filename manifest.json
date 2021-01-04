@@ -1,7 +1,7 @@
 {
   "name": "Right-click contenteditable",
   "version": "1.0",
-  "description": "Right click on an element and press \"Make bontenteditable\" to add a contenteditable attribute to it. Click again to remove the attribute.",
+  "description": "Right click on an element and press \"Add contenteditable\" to add a contenteditable attribute to it. Click again to remove it.",
   "author": "Paulius Sasnauskas",
   "manifest_version": 2,
   "icons": {
@@ -13,8 +13,7 @@
   "permissions": [
     "contextMenus", 
     "tabs",
-    "http://*/*",
-    "https://*/*"
+    "activeTab"
   ],
   "background": {
     "scripts": ["background.js"]
