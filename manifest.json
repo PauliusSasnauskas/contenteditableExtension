@@ -1,9 +1,9 @@
 {
   "name": "Right-click contenteditable",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Right click on an element and press \"Add contenteditable\" to add a contenteditable attribute to it. Click again to remove it.",
   "author": "Paulius Sasnauskas",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -11,11 +11,11 @@
   },
 
   "permissions": [
-    "contextMenus", 
-    "tabs"
+    "contextMenus"
   ],
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "service_worker.js",
+    "type": "module"
   },
   "content_scripts": [
     {

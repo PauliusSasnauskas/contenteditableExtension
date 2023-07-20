@@ -5,7 +5,7 @@ chrome.contextMenus.create({
 });
 
 chrome.contextMenus.onClicked.addListener(() => {
-    chrome.tabs.getSelected(undefined, (tab)=>{
-        chrome.tabs.sendMessage(tab.id, {"action": "contenteditableElement"});
+    chrome.tabs.query({active: true, currentWindow: true}, (tab)=>{
+        chrome.tabs.sendMessage(tab[0].id, {"action": "contenteditableElement"});
     });
 });
